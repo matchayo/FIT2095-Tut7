@@ -12,12 +12,7 @@ app.get("/actor", function (req, res) {
 
 app.get("/actor/add", function (req, res) {
     let newActorDetails = req.body;
-    newActorDetails._id = new mongoose.Types.ObjectId();
-    let actor = new Actor(newActorDetails);
-    actor.save(function (err) {
-        console.log('Done');
-        res.json(actor);
-    });
+    console.log(newActorDetails);
 });
 
 app.listen(8080);
