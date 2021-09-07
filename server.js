@@ -13,6 +13,7 @@ app.get("/actor", function (req, res) {
 app.get("/actor/add", function (req, res) {
     let newActorDetails = req.body;
     console.log(newActorDetails);
+    res.json(newActorDetails);
 });
 
 app.listen(8080);
